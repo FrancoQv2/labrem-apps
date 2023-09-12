@@ -1,0 +1,8 @@
+**/node_modules
+**/dist
+*.json
+*.yaml
+*.yml
+*.cjs
+*.md
+.prettierrc
