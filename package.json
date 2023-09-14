@@ -7,7 +7,6 @@
   "keywords": [],
   "license": "ISC",
   "type": "module",
-  "main": "index.js",
   "engines": {
     "node": ">=18",
     "pnpm": ">=8"
@@ -16,7 +15,7 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "format": "prettier --write .",
-    "lint": "eslint --ext .js --fix ."
+    "lint": "eslint --ext .js --ignore-path .gitignore"
   },
   "devDependencies": {
     "eslint": "^8.0.1",
