@@ -30,11 +30,11 @@ services:
     build:
       context: ./server
       no_cache: true
+      # dockerfile: Dockerfile
       dockerfile_inline: |
-        FROM node:18.7.0
+        FROM node:18.17.0-slim
         WORKDIR /usr/src/server
         COPY package.json .
-        COPY package-lock.json .
         RUN npm ci --omit=dev
         COPY . .
         EXPOSE 3000
@@ -59,7 +59,4 @@ services:
           - labrem-apps-teleco-server
 networks:
   labrem-network:
-    name: labrem-network
-    driver: bridge
-    ipam:
-      driver: default
+    external: true
